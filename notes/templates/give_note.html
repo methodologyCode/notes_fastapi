@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сообщение</title>
+    <!-- Подключаем CSS Materialize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+</head>
+
+<body>
+
+    <nav>
+        <div class="nav-wrapper">
+            <ul id="nav-mobile" class="left hide-on-med-and-down">
+                <li><a href="/">Отправить</a></li>
+                <li><a href="/give-note">Прочитать</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col s12 m8 offset-m2">
+                <div class="card">
+                    <div class="card-content">
+                        <span class="card-title">Введите ID записки и секретную фразу</span>
+                        <form id="getNoteForm" method="POST" action="/get_note">
+                            <div class="input-field">
+                                <input type="text" id="noteId" name="id" placeholder="Введите ID записки">
+                            </div>
+                            <div class="input-field">
+                                <input type="text" id="getSecretPhrase" name="secret" placeholder="Введите секретную фразу">
+                            </div>
+                            <div class="card-action">
+                                <button class="btn waves-effect waves-light" type="submit">Прочитать</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/note.js"></script>
+</body>
+
+</html>
